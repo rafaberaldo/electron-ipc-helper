@@ -4,7 +4,7 @@ Typesafe IPC helper/wrapper for Electron
 
 ## Installation
 
-Copy the ``ipc.ts`` file to your helpers, add your sender validation.
+Copy the ``ipc.ts`` file to your helpers, add your [sender validation](https://www.electronjs.org/docs/latest/tutorial/security#17-validate-the-sender-of-all-ipc-messages).
 Maybe I add a package in the future.
 
 ## Usage
