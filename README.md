@@ -5,7 +5,7 @@ Typesafe IPC helper/wrapper for Electron
 ## Installation
 
 Copy the ``ipc.ts`` file to your helpers, add your sender validation.
-Maybe I'll add a package in the future.
+Maybe I add a package in the future.
 
 ## Usage
 
@@ -16,6 +16,8 @@ Maybe I'll add a package in the future.
 // sayHi.ts
 import { createIpcPair } from 'ipc'
 
+// Parameters from main process are set after renderer's
+// They are set like this internally: fn(...argsRenderer, ...argsMain)
 function _sayHi (fromRenderer: string, fromMain: string) {
   console.log(`hi from ${fromRenderer}`)
   return `hi from ${fromMain}`
