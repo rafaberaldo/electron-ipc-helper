@@ -22,9 +22,7 @@ export function createIpcPair<T extends (...args: any[]) => any> (fn: T, key?: s
   validateKey(newKey)
 
   const invoker = (...args: Parameters<T>): Promise<ReturnType<T>> => {
-    const response = ipcRenderer.invoke(newKey, ...args)
-    response.then((data) => console.log(data)) // Debug
-    return response
+    return ipcRenderer.invoke(newKey, ...args)
   }
 
   const handler = (...argsMain: any[]) => {
