@@ -18,7 +18,7 @@ import { createIpcPair } from 'ipc'
 
 // Parameters from main process are set after renderer's
 // They are set like this internally: fn(...argsRenderer, ...argsMain)
-function _sayHi (fromRenderer: string, fromMain: string) {
+function _sayHi (fromRenderer: string, fromMain?: string) {
   console.log(`hi from ${fromRenderer}`)
   return `hi from ${fromMain}`
 }
