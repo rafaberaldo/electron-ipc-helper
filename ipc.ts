@@ -1,3 +1,8 @@
+/**
+ * Author: Rafael Beraldo <@rafaelpimpa>
+ * https://github.com/rafaelpimpa/electron-ipc-helper
+ */
+
 import { ipcMain, ipcRenderer } from 'electron'
 
 function validateKey (key?: string) {
